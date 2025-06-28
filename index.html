@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Explorer</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<script src="assets/config/config.js"></script>
+<body>
+    <header>
+        <div class="logo">
+        <a id="logoLink" href="">
+            <img src="assets/images/logo.jpg" alt="Logo">
+        </a>
+    </div> 
+        <h1>Mandelbrot Explorer</h1>
+    </header>
+    <script>document.getElementById('logoLink').href = config.baseUrl;</script>
+    <canvas id="mandelbrotCanvas"></canvas>
+    <div id="errorOutput"></div>
+    <div id="backButton">Zurück</div>
+    <div id="homeButton">Home</div>
+    <div id="instructions">Klicken und ziehen Sie, um einen Bereich auszuwählen und zu zoomen. Das Auswahlrechteck behält das Seitenverhältnis des Fensters bei.</div>
+    <div id="gradientPanel">
+        <h3>Gradient:</h3>
+        <div class="gradientOption">
+            <input type="radio" id="benchmarkGradient" name="gradient" value="benchmark" checked>
+            <label for="benchmarkGradient">Benchmark</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="blueWhiteGradient" name="gradient" value="blue_white">
+            <label for="blueWhiteGradient">Blue-White</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="blueGradient" name="gradient" value="blue">
+            <label for="blueGradient">Blue</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="greenGradient" name="gradient" value="green">
+            <label for="greenGradient">Green</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="greyGradient" name="gradient" value="grey">
+            <label for="greyGradient">Grey</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="darkgreyGradient" name="gradient" value="dark_grey">
+            <label for="greyGradient">Dark Grey</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="orangeGradient" name="gradient" value="orange">
+            <label for="orangeGradient">Orange</label>
+        </div>
+        <div class="gradientOption">
+            <input type="radio" id="redGradient" name="gradient" value="red">
+            <label for="orangeGradient">Red</label>
+        </div>
+    </div>
+    <div id="iterationsSliderContainer">
+        <h3>Iterationen: </h3>
+        <input type="range" id="iterationsSlider" min="100" max="10000" value="100" step="100">
+        <div id="iterationsValue">100</div>
+    </div>
+    <script>src="assets/js/init.js"</script>
+    <script src="assets/js/mandelbrot.js"></script>
+    <script src="assets/js/mandelbrotWorker.js"></script>
+    <script src="assets/js/utils_canvas.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/utils_event.js"></script>
+
+</body>
+</html>

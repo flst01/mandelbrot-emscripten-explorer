@@ -1,0 +1,155 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a shadow for better visibility */
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    font-family: American Typewriter, serif ;
+    color: rgb(0, 0, 0);
+    z-index: 1000;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.logo img {
+    width: 40px; /* Set the width to your desired square size */
+    height: 40px; /* Set the height to the same value as the width */
+    object-fit: cover; /* Ensures the image covers the square without distortion */
+}
+canvas {
+    display: block;
+}
+#errorOutput {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.0);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: red;
+    z-index: 1000;
+}
+#backButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: black;
+    z-index: 1000;
+    cursor: pointer;
+}
+#homeButton {
+    position: absolute;
+    top: 10px;
+    right: 90px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: black;
+    z-index: 1000;
+    cursor: pointer;
+}
+#backButton:hover, #homeButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#instructions {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: black;
+    z-index: 1000;
+}
+#gradientPanel {
+    position: absolute;
+    bottom: 150px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: black;
+    z-index: 1000;
+    width: 150px;
+}
+.gradientOption {
+    margin: 5px 0;
+}
+.gradientOption input {
+    margin-right: 8px;
+}
+#iterationsSliderContainer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: black;
+    z-index: 1000;
+    width: 150px;
+}
+#iterationsSlider {
+    width: 100%;
+}
+#iterationsValue {
+    margin-top: 5px;
+    font-weight: bold;
+}
+#renderOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2em;
+}
+#renderProgress {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+#renderSpinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 8px solid white;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
