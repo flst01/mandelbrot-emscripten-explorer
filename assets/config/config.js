@@ -4,7 +4,7 @@
 
 
 const config = {
-    baseUrl: ""
+    baseUrl: "https://flst01.github.io/"
     // Add other configurable strings as needed
 };
 
